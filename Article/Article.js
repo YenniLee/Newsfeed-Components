@@ -87,7 +87,7 @@ const data = [
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
   },
   {
-    title: 'I eat things',
+    title: 'Eating News',
     date: 'Sept 4th, 2019',
     firstParagraph: `Spanish tortillas are delicious and very easy to make`,
 
@@ -96,8 +96,6 @@ const data = [
     thirdParagraph: `Feel free to customize by adding your favorite ingredients. Peppers and mushrooms are my favorite additions.`
   }
 ];
-
-
 /*  
   <div class="article">
     <h2>{title of the article}</h2>
@@ -107,10 +105,7 @@ const data = [
   </div>
   Hint: You will need to use createElement more than once here!
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
-  
-  
 */
-
 const articles = document.querySelector('.articles');
 
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below:*/
