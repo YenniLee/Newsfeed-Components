@@ -106,9 +106,18 @@ const data = [
   Hint: You will need to use createElement more than once here!
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
 */
-const articles = document.querySelector('.articles');
+
 
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below:*/
+
+// Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
+// Step 3: return the entire component.
+
+// Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
+// Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
+      //online 89-97
+
+const articles = document.querySelector('.articles');
 function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph) {
   const article = document.createElement('div');
   const articleTitle = document.createElement('h2');
@@ -136,21 +145,16 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
   para3.textContent = thirdParagraph;
   button.textContent = '\u25bc';
 
-// Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
   button.addEventListener('click', (e) => {
     console.log('button was clicked');
     article.classList.toggle('article-open');
     article.classList.toggle('.close');
   });
 
-// Step 3: return the entire component.
   return article;
 }
 
-// Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
 data.forEach(info => {
   articles.appendChild(createArticle(info.title, info.date, info.firstParagraph, info.secondParagraph, info.thirdParagraph))
 });
 
-// Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
-      //online 89-97
